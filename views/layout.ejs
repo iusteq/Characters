@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <meta charset = utf-8>
+    	<meta charset="UTF-8">
+		<title>PW - proiect</title>
+        <link rel="stylesheet" href="css/css.css" type="text/css" media="screen,projection" />
+	</head>
+
+
+	<body class="container" onload="printTime()">
+
+
+        <div id="page">
+                
+            <aside id="aside">
+	
+
+               
+
+                <div id='logged'>
+
+                    <% if  (typeof numeLogat != 'undefined')  { %>
+                    <h3 id="lis" style="text-align:center">Logat ca <%= numeLogat %> </h3>
+            
+                    <% } %>  
+                </div>
+
+                <div id="divnav">
+			        <nav id="main-menu" >
+                        <ul id="nav">
+                            <li class="nav-item">
+                                <a href="/" class="nav-link">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="palette" class="svg-inline--fa fa-palette fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M204.3 5C104.9 24.4 24.8 104.3 5.2 203.4c-37 187 131.7 326.4 258.8 306.7 41.2-6.4 61.4-54.6 42.5-91.7-23.1-45.4 9.9-98.4 60.9-98.4h79.7c35.8 0 64.8-29.6 64.9-65.3C511.5 97.1 368.1-26.9 204.3 5zM96 320c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm32-128c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm128-64c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm128 64c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32z"></path></svg>
+                                    <span class="link-text">Acasa</span>
+                                </a>
+                            
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="/lista" class="nav-link">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="camera-retro" class="svg-inline--fa fa-camera-retro fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M48 32C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48H48zm0 32h106c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H38c-3.3 0-6-2.7-6-6V80c0-8.8 7.2-16 16-16zm426 96H38c-3.3 0-6-2.7-6-6v-36c0-3.3 2.7-6 6-6h138l30.2-45.3c1.1-1.7 3-2.7 5-2.7H464c8.8 0 16 7.2 16 16v74c0 3.3-2.7 6-6 6zM256 424c-66.2 0-120-53.8-120-120s53.8-120 120-120 120 53.8 120 120-53.8 120-120 120zm0-208c-48.5 0-88 39.5-88 88s39.5 88 88 88 88-39.5 88-88-39.5-88-88-88zm-48 104c-8.8 0-16-7.2-16-16 0-35.3 28.7-64 64-64 8.8 0 16 7.2 16 16s-7.2 16-16 16c-17.6 0-32 14.4-32 32 0 8.8-7.2 16-16 16z"></path></svg>
+                                    <span class="link-text">Lista</span>
+                                </a>
+                            </li>
+
+                            <!--<li><a href="/chestionar">Chestionar</a></li>-->
+
+                            <% if  (typeof numeLogat != 'undefined')  { %>
+
+
+                                <li class="nav-item">
+                                    <a href="/delogare" class="nav-link">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="volume-mute" class="svg-inline--fa fa-volume-mute fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M215.03 71.05L126.06 160H24c-13.26 0-24 10.74-24 24v144c0 13.25 10.74 24 24 24h102.06l88.97 88.95c15.03 15.03 40.97 4.47 40.97-16.97V88.02c0-21.46-25.96-31.98-40.97-16.97zM461.64 256l45.64-45.64c6.3-6.3 6.3-16.52 0-22.82l-22.82-22.82c-6.3-6.3-16.52-6.3-22.82 0L416 210.36l-45.64-45.64c-6.3-6.3-16.52-6.3-22.82 0l-22.82 22.82c-6.3 6.3-6.3 16.52 0 22.82L370.36 256l-45.63 45.63c-6.3 6.3-6.3 16.52 0 22.82l22.82 22.82c6.3 6.3 16.52 6.3 22.82 0L416 301.64l45.64 45.64c6.3 6.3 16.52 6.3 22.82 0l22.82-22.82c6.3-6.3 6.3-16.52 0-22.82L461.64 256z"></path></svg>
+                                        <span class="link-text">Delogare</span>
+                                    </a>
+                                </li>
+
+                                    <!--<li><a href="/vizualizare_cos"> Cosul meu de cumparaturi </a> </li>
+                                    <li><a href="/delogare">Delogare</a></li>-->
+                            <% } else { %> 
+
+                                <li class="nav-item">
+                                    <a href="/autentificare" class="nav-link">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="volume-down" class="svg-inline--fa fa-volume-down fa-w-12" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M215.03 72.04L126.06 161H24c-13.26 0-24 10.74-24 24v144c0 13.25 10.74 24 24 24h102.06l88.97 88.95c15.03 15.03 40.97 4.47 40.97-16.97V89.02c0-21.47-25.96-31.98-40.97-16.98zm123.2 108.08c-11.58-6.33-26.19-2.16-32.61 9.45-6.39 11.61-2.16 26.2 9.45 32.61C327.98 229.28 336 242.62 336 257c0 14.38-8.02 27.72-20.92 34.81-11.61 6.41-15.84 21-9.45 32.61 6.43 11.66 21.05 15.8 32.61 9.45 28.23-15.55 45.77-45 45.77-76.88s-17.54-61.32-45.78-76.87z"></path></svg>
+                                        <span class="link-text">Autentificare</span>
+                                    </a>
+                                </li>
+
+                                <!--<li><a href="/autentificare">Autentificare</a></li>-->
+                            <% } %>  
+
+            
+                        </ul>
+                        
+                    </nav>
+                    <div id="footer-aside"  >
+                        <p >© Copyright 2020 Iustina Iosub</p>
+                    </div>
+                    
+                </div>
+
+            </aside>
+        </div>
+
+
+<div id="main">
+
+    
+
+<%- body -%>
+
+</div>
+
+
+
+
+
+	
+	</body>
+
+    <script src="js/script.js"></script>
+
+    <meta charset="UTF-8">
+</html>
+
+
+
+
+

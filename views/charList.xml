@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<personaje>
+    <personaj id="1">
+        <nume>Erza</nume>
+        <anime>Fairy Tail</anime>
+    </personaj>
+    <personaj id="2">
+        <nume>Sasuke</nume>
+        <anime>Naruto</anime>
+    </personaj>
+    <personaj id="3">
+        <nume>Mikasa</nume>
+        <anime>Attack on Titan</anime>
+    </personaj>
+</personaje>
